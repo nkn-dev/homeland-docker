@@ -46,15 +46,15 @@ services:
         max-size: "1g"
         max-file: "10"
     volumes:
-      - ./shared/.well-known:/home/app/homeland/public/.well-known
       - ./data/uploads:/home/app/homeland/public/uploads
-      - ./shared/cache/uploads-thumb:/home/app/cache/uploads-thumb
-      - ./shared/system:/home/app/homeland/public/system
-      - ./shared/ssl:/home/app/ssl
-      - ./log:/home/app/log
-      - ./tmp/pids:/home/app/pids
-      - ./log:/home/app/homeland/log
-      - ./tmp:/home/app/homeland/tmp
+      - ./a-nkn-tmp/shared/.well-known:/home/app/homeland/public/.well-known
+      - ./a-nkn-tmp/shared/cache/uploads-thumb:/home/app/cache/uploads-thumb
+      - ./a-nkn-tmp/shared/system:/home/app/homeland/public/system
+      - ./a-nkn-tmp/shared/ssl:/home/app/ssl
+      - ./a-nkn-tmp/log:/home/app/log
+      - ./a-nkn-tmp/tmp/pids:/home/app/pids
+      - ./a-nkn-tmp/log:/home/app/homeland/log
+      - ./a-nkn-tmp/tmp:/home/app/homeland/tmp
       # - ./etc/nginx/conf.d:/etc/nginx/conf.d
       #
       - ./a-nkn-dev/homeland/config/nginx/conf.d:/etc/nginx/conf.d
