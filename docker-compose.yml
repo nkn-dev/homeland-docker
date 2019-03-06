@@ -62,6 +62,7 @@ services:
       - ./a-nkn-dev/homeland/config/nginx/homeland.conf.erb:/etc/nginx/homeland.conf.erb
       - ./a-nkn-dev/homeland/config/nginx/ssl.conf:/etc/nginx/ssl.conf
       - ./a-nkn-dev/homeland/app:/home/app/homeland/app
+      - ./a-nkn-dev/homeland/db:/home/app/homeland/db
       - ./a-nkn-dev/homeland/public/tools:/home/app/homeland/public/tools
       - ./a-nkn-dev/homeland/public/favicon.ico:/home/app/homeland/public/favicon.ico
       - ./a-nkn-dev/homeland/public/robots.txt:/home/app/homeland/public/robots.txt
