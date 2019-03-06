@@ -57,6 +57,7 @@ services:
       - ./a-nkn-tmp/tmp:/home/app/homeland/tmp
       # - ./etc/nginx/conf.d:/etc/nginx/conf.d
       #
+      - ./a-nkn-dev/homeland/config/nginx/ssl:/etc/nginx/ssl
       - ./a-nkn-dev/homeland/config/nginx/conf.d:/etc/nginx/conf.d
       - ./a-nkn-dev/homeland/config/nginx/homeland.conf.erb:/etc/nginx/homeland.conf.erb
       - ./a-nkn-dev/homeland/config/nginx/ssl.conf:/etc/nginx/ssl.conf
