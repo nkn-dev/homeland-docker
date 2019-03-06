@@ -55,8 +55,16 @@ services:
       - ./tmp/pids:/home/app/pids
       - ./log:/home/app/homeland/log
       - ./tmp:/home/app/homeland/tmp
-      - ./etc/nginx/conf.d:/etc/nginx/conf.d
-    command: /home/app/homeland/bin/docker-start
+      # - ./etc/nginx/conf.d:/etc/nginx/conf.d
+      #
+      - ./a-nkn-dev/homeland/config/nginx/conf.d:/etc/nginx/conf.d
+      - ./a-nkn-dev/homeland/config/nginx/homeland.conf.erb:/etc/nginx/homeland.conf.erb
+      - ./a-nkn-dev/homeland/config/nginx/ssl.conf:/etc/nginx/ssl.conf
+      - ./a-nkn-dev/homeland/app:/home/app/homeland/app
+      - ./a-nkn-dev/homeland/public/tools:/home/app/homeland/public/tools
+      - ./a-nkn-dev/homeland/public/favicon.ico:/home/app/homeland/public/favicon.ico
+      - ./a-nkn-dev/homeland/public/robots.txt:/home/app/homeland/public/robots.txt
+    command: bundle exec puma -C config/puma-master.rb
     ports:
       - "7000:7000"
 
